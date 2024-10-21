@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -O3 -shared  -o utils.dpi_chip_wrapper_debug.so CMakeFiles/utils.dpi_chip_wrapper_debug.dir/dpi_chip_wrapper.cpp.o  -Wl,-rpath,/home/ce-user/trial2/gvsoc/build/core/engine ../../engine/libpulpvp-debug.so -lz -lpthread -ldl 

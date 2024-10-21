@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -O3 -shared  -o devices.sound.transfer_function_debug.so CMakeFiles/devices.sound.transfer_function_debug.dir/transfer_function.cpp.o  -Wl,-rpath,/home/ce-user/trial2/gvsoc/build/core/engine utils/io_audio_file/io_audio_debug.a ../../../engine/libpulpvp-debug.so -lz -lpthread -ldl /usr/lib/x86_64-linux-gnu/libsndfile.so 

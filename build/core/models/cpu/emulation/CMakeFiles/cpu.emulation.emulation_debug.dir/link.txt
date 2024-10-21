@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -O3 -shared  -o cpu.emulation.emulation_debug.so CMakeFiles/cpu.emulation.emulation_debug.dir/emulation.cpp.o  -Wl,-rpath,/home/ce-user/trial2/gvsoc/build/core/engine ../../../engine/libpulpvp-debug.so -lz -lpthread -ldl 

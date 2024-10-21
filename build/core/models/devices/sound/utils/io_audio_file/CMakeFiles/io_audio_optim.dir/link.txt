@@ -1,0 +1,2 @@
+/usr/bin/ar qc io_audio_optim.a CMakeFiles/io_audio_optim.dir/io_audio.cpp.o
+/usr/bin/ranlib io_audio_optim.a

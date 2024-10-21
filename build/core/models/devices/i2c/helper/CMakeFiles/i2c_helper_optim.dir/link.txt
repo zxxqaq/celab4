@@ -1,0 +1,2 @@
+/usr/bin/ar qc i2c_helper_optim.a CMakeFiles/i2c_helper_optim.dir/i2c_helper.cpp.o
+/usr/bin/ranlib i2c_helper_optim.a

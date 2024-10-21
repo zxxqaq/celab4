@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -O3 -shared  -o gen_memory_memory_cpp_149327240_debug.so CMakeFiles/gen_memory_memory_cpp_149327240_debug.dir/models/memory/memory.cpp.o  -Wl,-rpath,/home/ce-user/trial2/gvsoc/build/core/engine engine/libpulpvp-debug.so -lz -lpthread -ldl 

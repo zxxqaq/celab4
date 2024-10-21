@@ -1,0 +1,263 @@
+{
+  "target": {
+    "mem": {
+      "size": 1048576,
+      "stim_file": null,
+      "power_trigger": false,
+      "width_bits": 2,
+      "align": 0,
+      "latency": 0,
+      "memcheck_id": -1,
+      "memcheck_base": 0,
+      "memcheck_virtual_base": 0,
+      "memcheck_expansion_factor": 5,
+      "vp_component": "gen_memory_memory_cpp_149327240"
+    },
+    "chip0": {
+      "clock": {
+        "vp_component": "vp.clock_engine_module",
+        "frequency": 100000000,
+        "factor": 1,
+        "ports": [
+          "out"
+        ]
+      },
+      "chip0": {
+        "mem": {
+          "size": 1048576,
+          "stim_file": null,
+          "power_trigger": false,
+          "width_bits": 2,
+          "align": 0,
+          "latency": 0,
+          "memcheck_id": -1,
+          "memcheck_base": 0,
+          "memcheck_virtual_base": 0,
+          "memcheck_expansion_factor": 5,
+          "vp_component": "gen_memory_memory_cpp_149327240",
+          "ports": [
+            "input"
+          ]
+        },
+        "ico": {
+          "mappings": {
+            "mem": {
+              "base": 0,
+              "size": 1048576,
+              "remove_offset": 0,
+              "add_offset": 0,
+              "latency": 0
+            }
+          },
+          "latency": 0,
+          "bandwidth": 0,
+          "nb_input_port": 1,
+          "vp_component": "gen_interco_router_common_cpp_121245830",
+          "ports": [
+            "mem",
+            "input"
+          ]
+        },
+        "host2": {
+          "isa": "rv64imafdc",
+          "misa": 1315117,
+          "first_external_pcer": 0,
+          "riscv_dbg_unit": true,
+          "debug_binaries": [],
+          "binaries": [],
+          "debug_handler": 0,
+          "power_models": {},
+          "cluster_id": 0,
+          "core_id": 0,
+          "fetch_enable": false,
+          "boot_addr": 0,
+          "has_double": true,
+          "vp_component": "gen_isa_rv64imafdc_cpp_56505881",
+          "ports": [
+            "fetch",
+            "data",
+            "data_debug",
+            "fetchen",
+            "bootaddr"
+          ]
+        },
+        "host1": {
+          "isa": "rv64imafdc",
+          "misa": 1315117,
+          "first_external_pcer": 0,
+          "riscv_dbg_unit": true,
+          "debug_binaries": [],
+          "binaries": [],
+          "debug_handler": 0,
+          "power_models": {},
+          "cluster_id": 0,
+          "core_id": 10,
+          "fetch_enable": false,
+          "boot_addr": 0,
+          "has_double": true,
+          "vp_component": "gen_isa_rv64imafdc_cpp_56505881",
+          "ports": [
+            "fetch",
+            "data",
+            "data_debug",
+            "fetchen",
+            "bootaddr"
+          ]
+        },
+        "loader1": {
+          "vp_component": "utils.loader.loader",
+          "binary": [
+            "/home/ce-user/trial2/gvsoc/docs/developer/tutorials/15_how_to_build_a_multi-chip_system/build/test"
+          ],
+          "ports": [
+            "out",
+            "start",
+            "entry"
+          ]
+        },
+        "loader2": {
+          "vp_component": "utils.loader.loader",
+          "binary": [
+            "/home/ce-user/trial2/gvsoc/docs/developer/tutorials/15_how_to_build_a_multi-chip_system/build/test"
+          ],
+          "ports": [
+            "out",
+            "start",
+            "entry"
+          ]
+        },
+        "gdbserver": {
+          "enabled": false,
+          "port": 12345,
+          "default_hartid": "",
+          "vp_component": "gdbserver.gdbserver"
+        },
+        "bindings": [
+          [
+            "ico->mem",
+            "mem->input"
+          ],
+          [
+            "host2->fetch",
+            "ico->input"
+          ],
+          [
+            "host2->data",
+            "ico->input"
+          ],
+          [
+            "host2->data_debug",
+            "ico->input"
+          ],
+          [
+            "host1->fetch",
+            "ico->input"
+          ],
+          [
+            "host1->data",
+            "ico->input"
+          ],
+          [
+            "host1->data_debug",
+            "ico->input"
+          ],
+          [
+            "loader1->out",
+            "ico->input"
+          ],
+          [
+            "loader1->start",
+            "host2->fetchen"
+          ],
+          [
+            "loader1->entry",
+            "host2->bootaddr"
+          ],
+          [
+            "loader2->out",
+            "ico->input"
+          ],
+          [
+            "loader2->start",
+            "host1->fetchen"
+          ],
+          [
+            "loader2->entry",
+            "host1->bootaddr"
+          ]
+        ],
+        "components": [
+          "mem",
+          "ico",
+          "host2",
+          "host1",
+          "loader1",
+          "loader2",
+          "gdbserver"
+        ],
+        "ports": [
+          "clock"
+        ]
+      },
+      "bindings": [
+        [
+          "clock->out",
+          "chip0->clock"
+        ]
+      ],
+      "components": [
+        "clock",
+        "chip0"
+      ]
+    },
+    "gvsoc": {
+      "proxy": {
+        "enabled": false,
+        "port": 42951
+      },
+      "events": {
+        "enabled": false,
+        "include_raw": [],
+        "include_regex": [],
+        "exclude_regex": [],
+        "format": "fst",
+        "active": false,
+        "all": true,
+        "gtkw": false,
+        "gen_gtkw": false,
+        "files": [],
+        "traces": {},
+        "tags": [
+          "overview"
+        ],
+        "use-external-dumper": null
+      },
+      "include_dirs": [
+        "/home/ce-user/trial2/gvsoc/install/models"
+      ],
+      "runner_module": "gv.gvsoc",
+      "cycles_to_seconds": "int(max(cycles * nb_cores / 5000000, 600))",
+      "werror": true,
+      "verbose": true,
+      "debug-mode": false,
+      "launchers": {
+        "default": "gvsoc_launcher",
+        "debug": "gvsoc_launcher_debug"
+      },
+      "traces": {
+        "level": "debug",
+        "format": "long",
+        "enabled": false,
+        "include_regex": [],
+        "exclude_regex": []
+      },
+      "systemc": false,
+      "wunconnected-padfun": false,
+      "memcheck": false
+    },
+    "components": [
+      "mem",
+      "chip0"
+    ]
+  }
+}

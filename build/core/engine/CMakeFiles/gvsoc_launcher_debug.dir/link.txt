@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -O3 CMakeFiles/gvsoc_launcher_debug.dir/src/main.cpp.o -o gvsoc_launcher_debug  -Wl,-rpath,/home/ce-user/trial2/gvsoc/build/core/engine: libpulpvp-debug.so -lz -lpthread -ldl 

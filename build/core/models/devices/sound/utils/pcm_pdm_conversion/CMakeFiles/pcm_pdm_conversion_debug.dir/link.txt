@@ -1,0 +1,2 @@
+/usr/bin/ar qc pcm_pdm_conversion_debug.a CMakeFiles/pcm_pdm_conversion_debug.dir/sigma_delta.cpp.o CMakeFiles/pcm_pdm_conversion_debug.dir/sigma_delta_arithmetics.cpp.o CMakeFiles/pcm_pdm_conversion_debug.dir/linear_interpolator.cpp.o CMakeFiles/pcm_pdm_conversion_debug.dir/iir_interpolator.cpp.o CMakeFiles/pcm_pdm_conversion_debug.dir/pcm_pdm_conversion.cpp.o
+/usr/bin/ranlib pcm_pdm_conversion_debug.a

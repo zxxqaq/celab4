@@ -1,0 +1,7 @@
+project(gapy)
+
+install(DIRECTORY bin
+    DESTINATION ${CMAKE_INSTALL_PREFIX}
+    USE_SOURCE_PERMISSIONS
+    PATTERN __pycache__ EXCLUDE
+)

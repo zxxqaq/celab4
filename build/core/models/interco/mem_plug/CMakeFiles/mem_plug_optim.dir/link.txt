@@ -1,0 +1,2 @@
+/usr/bin/ar qc mem_plug_optim.a CMakeFiles/mem_plug_optim.dir/implem/mem_plug.cpp.o
+/usr/bin/ranlib mem_plug_optim.a

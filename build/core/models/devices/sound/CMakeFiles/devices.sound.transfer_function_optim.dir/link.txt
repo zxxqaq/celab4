@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -O3 -shared  -o devices.sound.transfer_function_optim.so CMakeFiles/devices.sound.transfer_function_optim.dir/transfer_function.cpp.o  -Wl,-rpath,/home/ce-user/trial2/gvsoc/build/core/engine utils/io_audio_file/io_audio_optim.a ../../../engine/libpulpvp.so -lz -lpthread -ldl /usr/lib/x86_64-linux-gnu/libsndfile.so 

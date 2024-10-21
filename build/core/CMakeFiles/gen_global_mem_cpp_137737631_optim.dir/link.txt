@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -O3 -shared  -o gen_global_mem_cpp_137737631_optim.so CMakeFiles/gen_global_mem_cpp_137737631_optim.dir/__/docs/developer/cese4130-lab4/Part2/global_mem.cpp.o  -Wl,-rpath,/home/ce-user/trial2/gvsoc/build/core/engine engine/libpulpvp.so -lz -lpthread -ldl 
